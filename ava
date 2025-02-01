@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ทดสอบความรัก</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2;
+            text-align: center;
+            color: #d63384;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn {
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #ff3385;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💖 ทดสอบความรัก 💖</h1>
+        <p>แฟนของคุณชอบสีอะไร?</p>
+        <button class="btn" onclick="checkAnswer('ถูก')">สีชมพู</button>
+        <button class="btn" onclick="checkAnswer('ผิด')">สีฟ้า</button>
+        <p id="quiz-result"></p>
+        <br>
+        <button class="btn" onclick="location.href='index.html'">🔙 กลับหน้าแรก</button>
+    </div>
+
+    <script>
+        function checkAnswer(answer) {
+            document.getElementById('quiz-result').innerText = (answer === 'ถูก') ? "ถูกต้อง! 💕" : "ผิดแล้ว 😢";
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ภารกิจรัก</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2;
+            text-align: center;
+            color: #d63384;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn {
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #ff3385;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💬 ภารกิจรัก 💬</h1>
+        <div id="chat-box">
+            <p>💬 แฟน: วันนี้ไปเดทกันไหม? 💕</p>
+            <button class="btn" onclick="chatResponse('ไปสิ! 💖')">ไปสิ! 💖</button>
+            <button class="btn" onclick="chatResponse('ขอโทษนะ มีธุระ 😢')">ขอโทษนะ มีธุระ 😢</button>
+        </div>
+        <br>
+        <button class="btn" onclick="location.href='index.html'">🔙 กลับหน้าแรก</button>
+    </div>
+
+    <script>
+        function chatResponse(response) {
+            document.getElementById('chat-box').innerHTML += `<p>คุณ: ${response}</p>`;
+        }
+    </script>
+</body>
+</html>
